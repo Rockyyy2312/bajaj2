@@ -19,7 +19,7 @@ class LLMService:
         self.groq_api_key = settings.GROQ_API_KEY
         self.llm = ChatGroq(
             api_key=self.groq_api_key,
-            model_name="llama3-70b-8192"  # or "mixtral-8x7b-32768"
+            model_name="meta-llama/llama-4-scout-17b-16e-instruct"  # or "mixtral-8x7b-32768"
         )
     
     def extract_entities_from_query(self, query: str) -> ExtractedEntities:
